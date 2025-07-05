@@ -1,38 +1,131 @@
----
-layout: default
-title: Home
----
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chien-Yi Chang | Academic Website</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 40px auto;
+      max-width: 700px;
+      line-height: 1.6;
+      padding: 0 10px;
+      color: #333;
+      background-color: #fafafa;
+    }
+    h1, h2 {
+      color: #111;
+      margin-top: 1.5em;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .profile-pic {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 0px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .titles {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    blockquote {
+      font-style: italic;
+      color: #666;
+      margin: 0.5em auto;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.85em;
+      color: #888;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+      .profile-pic {
+        max-width: 120px;
+      }
+      .titles {
+        font-size: 1em;
+      }
+      blockquote {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="profile.jpeg" alt="Profile Photo" class="profile-pic" loading="lazy">
+    <h1>Chien-Yi Chang</h1>
+    <div class="titles">
+      Assistant Professor of Law<br>
+      Assistant Professor of Computer Science<br>
+      Durham University
+    </div>
+<!--     <blockquote>
+      “Data, law, and justice — woven together for a fairer future.”
+    </blockquote> -->
   </div>
-  {% endfor %}
-</div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+  <p style="text-align: justify;">Chien-Yi Chang is an Assistant Professor of Computer Science and Assistant Professor of Law at Durham University. She is affiliated with the Center for Sustainable Development Law and Policy and the JusTN0W initiative. Her research sits at the intersection of artificial intelligence, technology law, and legal theory, with a focus on equitable and sustainable data practices.</p>
 
+
+
+
+  
+  <h2>Research</h2>
+  <ul>
+    <li><strong>The Liabilities of Robots.txt</strong><br>
+        Under review, 2025. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5159436" target="_blank">[SSRN]</a></li>
+    <li><strong>Toward Equitable and Sustainable Data Handling in AI and Biomedical Research</strong><br>
+        PhD Dissertation, Stanford University, 2025. </li>
+
+    <li><strong><a href="https://scholar.google.com/citations?user=qe8AH6UAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></strong></li>
+  </ul>
+
+
+  <h2>Education</h2>
+  <ul>
+    <li>Ph.D., Stanford (Electrical Engineering)</li>
+    <li>J.D., CUHK (Law)</li>
+    <li>B.S., Caltech (Physics)</li>
+  </ul>
+  
+
+  <h2>Contact</h2>
+  <p>I am currently hiring postdocs, PhD students, and research assistants. If you are interested in working with me, please fill out this <a href="https://forms.gle/cdSaZnptt5XG2Lo69" target="_blank">form</a>.</p>
+
+  <footer>
+    © 2025 Chien-Yi Chang · Last updated April 2025
+  </footer>
+</body>
+</html>
